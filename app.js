@@ -3,6 +3,8 @@ var app = express();
 var request = require("request");
 
 app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public"));
+
 
 app.get("/", function(req, res){
     res.render("search");
@@ -10,7 +12,6 @@ app.get("/", function(req, res){
 
 app.get("/results", function(req, res){
     var query = req.query.search;
-    // var url="http://www.omdbapi.com/?apikey=572c966&s="+query;
     var url="http://api.openweathermap.org/data/2.5/weather?zip="+query+"&units=imperial&appid=XXXX";
     
     request(url, function (error, response, body) {
