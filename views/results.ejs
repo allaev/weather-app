@@ -1,40 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="./stylesheets/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/public/stylesheets/main.css">
-  </head>
-  <body>
-	<div class="wrapper">
-	  <h1><%= data["name"] %></h1>
-
-    <div class="blocks">      
-      <div class="block">
-        <h2>Pressure</h2>
-        <p><%= data["main"]["pressure"] %> hPa</p>
-      </div>
-      <div class="block">
-        <h2>Current Temperature</h2>
-        <p><%= data["main"]["temp"] %> &deg;F</p>
-      </div>
-      <div class="block">
-        <h2>Humidity</h2>
-        <p><%= data["main"]["temp_min"] %> &deg;F</p>
-      </div>
-      <div class="block">
-        <h2>Min. Temperature</h2>
-        <p><%= data["main"]["temp_min"] %> &deg;F</p>
-      </div>
-      <div class="block">
-        <h2>Max Temperature</h2>
-        <p><%= data["main"]["temp_max"] %> &deg;F</p>
-      </div>
+<% include ./partials/header %>
+    <div class="wrapper">
+    	<h1><%= data["name"] %></h1>
+    
+        <div class="blocks">      
+          <div class="block">
+            <h2>Pressure</h2>
+            <p><%= data["main"]["pressure"] %> hPa</p>
+          </div>
+          <div class="block">
+            <h2>Current Temperature</h2>
+            <p id="temperature"><%= data["main"]["temp"] %> &deg;F</p>
+          </div>
+          <div class="block">
+            <h2>Humidity</h2>
+            <p><%= data["main"]["temp_min"] %> &deg;F</p>
+          </div>
+          <div class="block">
+            <h2>Min. Temperature</h2>
+            <p><%= data["main"]["temp_min"] %> &deg;F</p>
+          </div>
+          <div class="block">
+            <h2>Max Temperature</h2>
+            <p><%= data["main"]["temp_max"] %> &deg;F</p>
+          </div>
+        </div>
+    
+        <a href="/">Another weather</a>
     </div>
-
-    <a href="/">Another weather</a>
-	</div>
-  </body>
-</html>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./javascript/main.js"></script>
+<% include ./partials/footer %>
