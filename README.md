@@ -7,3 +7,4 @@ Weather app
 - Request
 - EJS
 - OpenWeatherMap API
+- jQuery
