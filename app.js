@@ -12,7 +12,7 @@ app.get("/", function(req, res){
 
 app.get("/results", function(req, res){
     var query = req.query.search;
-    var url="http://api.openweathermap.org/data/2.5/weather?zip="+query+"&units=imperial&appid=XXXX";
+    var url="http://api.openweathermap.org/data/2.5/weather?q="+query+"&units=imperial&appid=XXXX";
     
     request(url, function (error, response, body) {
       if(!error && response.statusCode == 200){

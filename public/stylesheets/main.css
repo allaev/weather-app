@@ -27,7 +27,7 @@ h1{
     font-size: 60px;
 }
 
-input[type=number] {
+input[type=text] {
   width: 295px;
   font-size: 20px;
   text-align: center;
@@ -38,7 +38,7 @@ input[type=number] {
   -moz-appearance:textfield;
 }
 
-input[type=number]:focus {
+input[type=text]:focus {
   border-color: #333;
 }
 
