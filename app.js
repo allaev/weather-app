@@ -7,12 +7,12 @@ app.use(express.static(__dirname + "/public"));
 
 
 app.get("/", function(req, res){
-    res.render("search");
+    res.render("index");
 });
 
 app.get("/results", function(req, res){
     var query = req.query.search;
-    var url="http://api.openweathermap.org/data/2.5/weather?q="+query+"&units=imperial&appid=XXXX";
+    var url="http://api.openweathermap.org/data/2.5/weather?q="+query+"&units=imperial&appid=2929e2a972b4c9378b08d8114d65b444";
     
     request(url, function (error, response, body) {
       if(!error && response.statusCode == 200){
